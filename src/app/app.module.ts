@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
 import { LoginComponent } from './pages/login/login.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { GroupsModule } from './pages/groups/groups.module';
 
 //routes
 import { routeConfig } from './app.routes';
@@ -21,6 +22,7 @@ import { routeConfig } from './app.routes';
   imports: [
     BrowserModule,
     ComponentsModule,
+    GroupsModule,
     RouterModule.forRoot(routeConfig),
     NgbModule.forRoot()
   ],
