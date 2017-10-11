@@ -14,6 +14,15 @@
 body {
   font: 100% $font-stack;
   color: $primary-color;
+  background-color: white;
 }
 
-.box { @include border-radius(10px); }
+.page-container{
+  margin-top: 50px;
+  min-height: 300px;
+}
+
+.box {
+  @include border-radius(10px);
+  background-color: #CCC;
+}

@@ -1,0 +1,12 @@
+nav{
+  background-color: white;
+  height: 50px;
+  border-bottom: 1px solid #BBB;
+  .list-inline{
+    margin: 0px;
+    li:not(:last-child){
+      padding-right: 15px;
+      border-right: 1px solid #CCC;
+    }
+  }
+}

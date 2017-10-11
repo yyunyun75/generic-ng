@@ -1,0 +1,10 @@
+.container{
+  border-top: 1px solid #BBB;
+  margin-top: 1em;
+  ul{
+    margin-top: 1em;
+    li:not(:last-child){
+      margin-bottom: .5em;
+    }
+  }
+}
