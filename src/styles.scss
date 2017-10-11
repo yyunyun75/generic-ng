@@ -1,0 +1,19 @@
+//IF needed take out the path from angular-cli and customize bootstrap scss files
+// @import
+//   '~bootstrap/scss/functions',
+//   '~bootstrap/scss/variables',
+//   '~bootstrap/scss/mixins',
+//   '~bootstrap/scss/print',
+//   '~bootstrap/scss/reboot',
+//   '~bootstrap/scss/type';
+
+@import './sass/variables';
+@import './sass/mixins';
+
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+.box { @include border-radius(10px); }
