@@ -8,12 +8,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class GroupListComponent implements OnInit {
   groups;
+  filterObj = {'id':''};
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.groups = this.route.snapshot.data['groups'];
-    console.log('groups data',this.groups);
+    this.groups = this.route.snapshot.data['groups'].splice(0,10);
+    console.log(this.groups);
+  }
+
+  onChange(newValue){
+    this.filterObj['id'] = newValue;
   }
 
 }

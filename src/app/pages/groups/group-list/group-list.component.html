@@ -1,5 +1,29 @@
 <div class="page-container" id="page-group-list">
-<p>
-  group-list works!
-</p>
+  <div class="container">
+    <h3>My Groups</h3>
+    <div class="card mb-3">
+      <div class="card-header">
+        Filter available groups:
+      </div>
+      <div class="card-block p-3">
+        <input type="text"
+              [(ngModel)]="filterObj.title"
+              (ngModelChange)="onChange($event)"
+              class="form-control"
+              placeholder="Filter groups by name or group id"
+        >
+      </div>
+    </div>
+    <h6>Group Results</h6>
+    <ngb-accordion #acc="ngbAccordion" closeOthers="true">
+      <ngb-panel *ngFor="let group of groups | filter:filterObj; index as i;">
+        <ng-template ngbPanelTitle>
+          <img src="assets/svg/si-glyph-arrow-down.svg" width="16px" height="16px"/><span><b>{{i+1}}.</b> {{group.title}}</span>
+        </ng-template>
+        <ng-template ngbPanelContent>
+          {{group.body}}
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+  </div>
 </div>
